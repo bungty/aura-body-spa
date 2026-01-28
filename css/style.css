@@ -68,6 +68,14 @@ body{
   box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
+.dropdown-menu a{
+  list-style-type:none;
+  padding:10px 15px;
+  display:block;
+  text-decoration:none;
+  color:#000;
+}
+
 .dropdown:hover .dropdown-menu{
   display:block;
 }
