@@ -31,10 +31,9 @@ body{
 
 .logo img{
   height:65px;
-  object-fit:contain;
 }
 
-/* NAV */
+/* MENU */
 .nav-menu{
   list-style:none;
   display:flex;
@@ -66,28 +65,66 @@ body{
   width:260px;
   background:#fff;
   display:none;
-  flex-direction:column;
   box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
-
-.dropdown-menu li{
-  border-bottom:1px solid #eee;
-}
-
-.dropdown-menu a{
-  padding:12px 15px;
-  display:block;
-  color:#000;
-}
-
-.dropdown-menu a:hover{
-  background:#f7f7f7;
-  color:#e77817;
 }
 
 .dropdown:hover .dropdown-menu{
   display:block;
 }
+
+/* HAMBURGER */
+.menu-toggle{
+  display:none;
+  font-size:30px;
+  cursor:pointer;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 991px){
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .navbar{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:#fff;
+    display:none;
+  }
+
+  .navbar.active{
+    display:block;
+  }
+
+  .nav-menu{
+    flex-direction:column;
+    gap:0;
+  }
+
+  .nav-menu li{
+    border-bottom:1px solid #eee;
+  }
+
+  .nav-menu a{
+    padding:15px 20px;
+    display:block;
+  }
+
+  /* Dropdown mobile */
+  .dropdown-menu{
+    position:static;
+    box-shadow:none;
+    display:none;
+  }
+
+  .dropdown.active .dropdown-menu{
+    display:block;
+  }
+}
+
 
 /* ===== SLIDER ===== */
 .slider{

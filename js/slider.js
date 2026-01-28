@@ -71,3 +71,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
+
+  const menuToggle = document.getElementById("menuToggle");
+  const navbar = document.getElementById("navbar");
+  const dropdown = document.querySelector(".dropdown");
+
+  menuToggle.onclick = () => {
+    navbar.classList.toggle("active");
+  };
+
+  dropdown.onclick = () => {
+    dropdown.classList.toggle("active");
+  };
+
+
